@@ -1,0 +1,130 @@
+/*  About owner container  */
+
+.about-owner-container {
+    min-height: 80vh;
+    overflow: hidden;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 1rem;
+    margin: 20px 10px;
+    padding-top: 40px;
+    padding-bottom: 20px;
+    border-radius: 10px;
+    background-color: var(--extralightpurple);
+    /* background: url("/resources/images/background_img2.png"); */
+    justify-content: center;
+}
+
+.owner-image {
+    flex: 1;
+    max-width: 300px;
+    display: flex;
+    justify-content: start;
+}
+
+.about-owner {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: center;
+    flex: 1;
+    max-width: 40%;
+}
+
+.name-about {
+    display: flex;
+    align-items: flex-end;
+    flex-direction: column;
+}
+
+.name-about .full-name {
+    font-size: 3rem;
+}
+
+.name-about .nick-name {
+    color: #000;
+    font-size: 2rem;
+}
+
+.about-owner>span {
+    font-size: 1.25rem;
+    font-family: "Roboto Mono", "Lucida Grande", "Lucida Sans Unicode", Geneva, Verdana,
+        sans-serif;
+    text-align: justify;
+}
+
+.owner-image img {
+    max-width: 100%;
+    object-fit: cover;
+    aspect-ratio: calc(2 / 3);
+    border-radius: 10px;
+    border: black 2px solid;
+    transition: all 0.2s ease-in-out;
+}
+
+.owner-image img:hover {
+    position: relative;
+    transform: scale(102%, 102%);
+    box-shadow: 7px 7px 5px 3px rgba(255, 190, 190, 0.865);
+}
+
+.bottom {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+
+.with-padding-top {
+    padding-top: 60px;
+}
+
+
+@media (max-width: 900px) {
+    .about-owner-container {
+        display: block;
+    }
+
+    .bottom {
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .owner-image {
+        display: block;
+        align-items: center;
+        justify-content: center;
+        max-width: 75%;
+        height: inherit;
+    }
+
+    .owner-image img {
+        max-width: 100%;
+    }
+
+    .text-at-top {
+        font-size: 1.2rem;
+    }
+
+    .about-owner {
+        max-width: inherit;
+        padding: 5px 30px;
+        text-align: justify;
+    }
+
+    .top .name-about{
+        padding: 30px 0;
+        align-items: center;
+    }
+
+    .name-about .full-name {
+        font-size: 2.7rem;
+        text-align: center;
+    }
+
+    .nick-name {
+        text-align: center;
+        margin-bottom: 10px;
+    }
+}
