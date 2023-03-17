@@ -4,5 +4,80 @@
     background-image: url("https://img.freepik.com/premium-photo/green-vintage-dial-telephone-handset-with-green-background_180224-81.jpg?w=996");
     background-size: cover;
     /* background-position:right; */
+    display: flex;
+    align-items: center;
+    justify-content: end;
+    padding: 50px;
 
+
+}
+
+
+.contact-form-container {
+    background-color: rgba(255, 255, 255, 0.25);
+    border-radius: 10px;
+    padding: 20px;
+
+}
+
+.contact-form-container>form {
+    min-width: 40vw;
+    /* max-width: 90vw; */
+    min-height: 50vh;
+    display: flex;
+    gap: 20px;
+    flex-direction: column;
+    /* align-items: center;  */
+    justify-content: space-between;
+}
+
+.form-name {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.form-name > *{
+    flex: 1;
+    flex-grow: 1;
+}
+
+input,
+textarea,
+button {
+    outline: none;
+    border: none;
+    font-size: 1rem;
+    padding: 10px;
+    border-radius: 5px;
+
+    resize: none;
+
+    background: rgba(255, 255, 255, 0.305);
+}
+
+button{
+    color: white;
+    background-color: rgb(1, 118, 118);
+    cursor: pointer;
+}
+
+@media (max-width: 900px) {
+    .contact-me-background{
+        justify-content: center;
+    }
+
+    .form-name{
+        flex-direction: column;
+    }
+
+    .contact-form-container>form {
+        width: 80vw;
+        gap: 5px;
+    }
+
+    .form-name > *{
+        width: 100%;
+    }
 }
