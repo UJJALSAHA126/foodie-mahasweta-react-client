@@ -2,7 +2,7 @@ import React from 'react'
 import "../css/contactme.css"
 import { motion } from 'framer-motion'
 import { initial, animate, exit } from '../../constants/PageTransitionProperties';
-import { useForm, ValidationError } from '@formspree/react';
+import { useForm, /*ValidationError*/ } from '@formspree/react';
 
 function ContactMe() {
 

@@ -20,7 +20,7 @@
     flex: 1;
     max-width: 300px;
     display: flex;
-    justify-content: start;
+    justify-content: flex-start;
 }
 
 .about-owner {
@@ -49,8 +49,8 @@
 
 .about-owner>span {
     font-size: 1.25rem;
-    font-family: "Roboto Mono", "Lucida Grande", "Lucida Sans Unicode", Geneva, Verdana,
-        sans-serif;
+    font-family: "Roboto Mono", "Lucida Grande", "Lucida Sans Unicode", Geneva,
+        Verdana, sans-serif;
     text-align: justify;
 }
 
@@ -75,11 +75,9 @@
     justify-content: space-evenly;
 }
 
-
 .with-padding-top {
     padding-top: 60px;
 }
-
 
 @media (max-width: 900px) {
     .about-owner-container {
@@ -113,13 +111,13 @@
         text-align: justify;
     }
 
-    .top .name-about{
+    .top .name-about {
         padding: 30px 0;
         align-items: center;
     }
 
     .name-about .full-name {
-        font-size: 2.7rem;
+        font-size: 2.2rem;
         text-align: center;
     }
 

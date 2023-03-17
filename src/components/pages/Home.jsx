@@ -17,6 +17,7 @@ function Home() {
                 <div className="name-about">
                     <span className="full-name">
                         <span className="first">Mahasweta</span>
+                        &nbsp;
                         <span className="second">Ghatak</span>
                     </span>
                     <span className="nick-name">(Mem)</span>
@@ -25,7 +26,7 @@ function Home() {
 
             <div className="bottom">
                 <div className="owner-image">
-                    <img src={memImg} />
+                    <img src={memImg} alt='' />
                 </div>
 
                 <div className="about-owner">

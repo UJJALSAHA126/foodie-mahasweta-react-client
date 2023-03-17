@@ -64,9 +64,13 @@
     box-sizing: border-box;
 }
 
+.back-color {
+    background-color: var(--peachColor1);
+}
+
 
 .top-margin-div {
-    height:  var(--headerHeight);
+    height: var(--headerHeight);
 }
 
 nav {
@@ -87,6 +91,7 @@ nav {
     justify-content: space-between;
 
     transition: all 0.2s ease-in-out;
+    /* transition: all 3s ease-in-out; */
 
     /* background-color: #b2fff1; */
 }
@@ -133,11 +138,13 @@ nav .name-logo {
 /*  Right side option list section  */
 
 .option-list {
-    margin-right: 50px;
     display: flex;
+    margin-right: 50px;
     gap: 20px;
     align-items: center;
     justify-content: center;
+
+    transition: all 0.3s ease-in-out;
 }
 
 .option-list>ul {
@@ -166,6 +173,11 @@ nav .name-logo {
     color: white;
 }
 
+.active-page {
+    background-color: #cc3366;
+    color: white !important;
+}
+
 /* Menu Button */
 .menu-btn {
     cursor: pointer;
@@ -173,6 +185,7 @@ nav .name-logo {
     right: 20px;
     top: 20px;
     width: 20px;
+    z-index: 12;
     display: none;
 }
 
@@ -191,7 +204,7 @@ nav .name-logo {
     nav {
         flex-direction: column;
         align-items: center;
-        background-color: var(--peachColor1);
+        /* background-color: var(--peachColor1); */
     }
 
     /* .name-logo .name {
@@ -208,17 +221,23 @@ nav .name-logo {
         /* display: none; */
         position: absolute;
         top: -90px;
-        /* top: 0; */
+        /* top: 45px; */
         margin-right: 0;
         /* padding-top: 20px; */
-        padding-bottom: 5px;
+        padding-bottom: 15px;
         width: 100%;
-        background-color: var(--peachColor1);
+        /* background-color: var(--peachColor1); */
         animation: slideOut 0.3s;
 
         box-shadow: 0 3px 5px grey;
 
         /* transform: translateY(-200%); */
+    }
+
+    .option-list-active {
+        position: relative;
+        top: 0;
+        padding-top: 15px;
     }
 
     .option-list ul {
@@ -271,6 +290,6 @@ nav .name-logo {
         position: absolute;
         top: 20px;
         right: 20px;
-        display: inline;
+        /* display: inline; */
     }
 }
