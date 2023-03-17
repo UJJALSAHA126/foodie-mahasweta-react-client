@@ -65,7 +65,12 @@
 }
 
 
+.top-margin-div {
+    height:  var(--headerHeight);
+}
+
 nav {
+    /* position: sticky; */
     position: fixed;
     top: 0;
     left: 0;
@@ -83,7 +88,7 @@ nav {
 
     transition: all 0.2s ease-in-out;
 
-    background-color: #b2fff1;
+    /* background-color: #b2fff1; */
 }
 
 nav-back {
@@ -215,6 +220,7 @@ nav .name-logo {
 
         /* transform: translateY(-200%); */
     }
+
     .option-list ul {
         display: flex;
         flex-wrap: wrap;

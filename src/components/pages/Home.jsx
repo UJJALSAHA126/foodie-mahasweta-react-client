@@ -1,10 +1,18 @@
 import React from 'react'
 import memImg from "../../resources/images/mem_photos/mem_img15.png";
 import "../css/home.css"
+import { motion } from 'framer-motion';
+import { initial, animate, exit } from '../../constants/PageTransitionProperties';
 
 function Home() {
     return (
-        <div id="about_me_section" className="about-owner-container">
+        <motion.div id="about_me_section" className="about-owner-container page-container"
+
+            initial={initial}
+            animate={animate}
+            exit={exit}
+
+        >
             <div className="top">
                 <div className="name-about">
                     <span className="full-name">
@@ -26,7 +34,7 @@ function Home() {
                 </div>
             </div>
 
-        </div >
+        </motion.div >
     )
 }
 

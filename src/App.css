@@ -32,7 +32,15 @@
   from {
     transform: rotate(0deg);
   }
+
   to {
     transform: rotate(360deg);
   }
+}
+
+.page-container {
+  width: 100%;
+  /* min-height: calc(100vh - 50px); */
+  min-height: 100vh;
+  padding-top: 50px;
 }

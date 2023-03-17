@@ -1,0 +1,19 @@
+.food-creation-background {
+    /* background-color: rgb(90, 90, 172); */
+    background-image: url("https://thumbs.dreamstime.com/z/background-food-products-form-frame-copy-space-healthy-photography-menu-169192880.jpg");
+    /* background-image: url("https://foodie-mahasweta.web.app/resources/images/album_photos/image2.png"); */
+    /* background-size: 100% 100%; */
+    background-size: cover;
+}
+
+/* .food-creation-background::before {
+    content: "";
+    position: absolute;
+    width: 100vw;
+    height: 100vh;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    background: url("https://foodie-mahasweta.web.app/resources/images/latest_photos/image2.png") 0 0 no-repeat;
+    transform: rotate(0deg);
+} */
