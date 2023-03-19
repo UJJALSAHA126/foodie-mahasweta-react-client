@@ -1,17 +1,17 @@
 /*  About owner container  */
 
 .about-owner-container {
-    min-height: calc(100vh - 50px);
+    /* min-height: calc(100vh - 50px); */
     overflow: hidden;
     display: flex;
     flex-wrap: wrap;
     align-items: center;
-    gap: 1rem;
-    margin: 00px 10px;
+    gap: 1rem; 
     /* padding-top: 40px; */
-    padding-bottom: 20px;
+    /* padding-bottom: 20px; */
     border-radius: 10px;
-    background-color: var(--extralightpurple);
+    /* background-color: var(--extralightpurple); */
+    background-color: #fdcaca;
     /* background: url("/resources/images/background_img2.png"); */
     justify-content: center;
 }

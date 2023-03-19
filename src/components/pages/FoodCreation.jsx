@@ -11,7 +11,7 @@ function FoodCreation() {
       exit={exit}
 
     >
-      FoodCreation
+    
     </motion.div>
   )
 }
