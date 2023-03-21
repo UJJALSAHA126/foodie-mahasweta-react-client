@@ -6,8 +6,8 @@
 
     /* background-image: url("../../resources/images/FB_IMG_1679154100349.jpg"); */
     /* background-image: url("../../resources/images/IMG_20230318_203803.jpg"); */
-    /* background-image: url("../../resources/images/IMG_20230318_213532.png"); */
-    /* background-image: url("../../resources/images/IMG_20230318_213624.jpg"); */
+    /* background-image: url("../../resources/images/IMG_20230318_213532.png");
+    background-image: url("../../resources/images/IMG_20230318_213624.jpg"); */
 
     background-color: rgb(125, 125, 205);
     background-size: contain;
@@ -15,34 +15,93 @@
     background-repeat: repeat-x;
     background-position: center;
 
-    display: grid;
-    align-items: start;
-    justify-content: center;
+    display: flex;
+    flex-flow: column;
+    /* height: 200vh; */
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+
 
 }
 
-/* .food-creation-background::before {
-    content: "";
-    position: absolute;
-    width: 100vw;
-    height: 100vh;
-    top: 0;
-    left: 0;
-    z-index: -1;
-    background: url("https://foodie-mahasweta.web.app/resources/images/latest_photos/image2.png") 0 0 no-repeat;
-    background-image: url("../../resources/images/IMG_20230318_213532.png");
+.upper-tabs {
+    position: sticky;
+    top: 60px;
+    margin-top: 20px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
 
-    transform: rotate(0deg);
-} */
+.upper-tabs>span {
+    width: 10ch;
+    cursor: pointer;
+    text-align: center;
+    font-size: 1.1rem;
+    font-weight: 450;
+    color: #0d5730;
+    background-color: white;
+    padding: 10px;
+    border-radius: 100vh;
+
+    transition: all 0.4s ease-in-out;
+}
+
+.upper-tabs .active {
+    /* background-color: #de453a; */
+    background-image: linear-gradient(rgb(255, 0, 0), rgb(255, 133, 133));
+    color: white;
+    cursor: pointer;
+}
+
+.lower-content-section {
+    margin-top: 20px;
+}
+
+.content-container {
+    flex: 1 1 auto;
+    width: 98vw;
+    padding: 10px 15px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    background-color: #c8f6dc;
+    border-radius: 10px;
+    /* height: 100vh; */
+    height: 100%;
+}
 
 
+
+
+
+@media (max-width: 900px) {
+    .food-creation-background {
+        background-size: cover;
+        background-position: center;
+    }
+}
+
+
+
+
+
+
+
+
+/* Testing */
 .test-img {
-    width: 500px;
+    max-width: 80vw;
     /* height: 50%; */
-    min-height: 500px;
+    /* min-height: 500px; */
     background-color: gray;
     border-radius: 20px;
     margin-bottom: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 
     animation-name: lazyloading;
     animation-duration: 2s;
@@ -95,15 +154,4 @@
     color: blue;
     background-color: rgb(181, 255, 129);
 
-}
-
-
-
-
-
-@media (max-width: 900px) {
-    .food-creation-background {
-        background-size: cover;
-        background-position: center;
-    }
 }

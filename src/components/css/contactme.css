@@ -14,7 +14,6 @@
     background-color: rgba(255, 255, 255, 0.25);
     border-radius: 10px;
     padding: 20px;
-
 }
 
 .contact-form-container>form {
@@ -56,6 +55,7 @@ button {
 
 button {
     color: white;
+    font-size: 1.25rem;
     background-color: rgb(1, 118, 118);
     cursor: pointer;
 }
@@ -67,11 +67,12 @@ button {
 
     .form-name {
         flex-direction: column;
+        gap: 5px;
     }
 
     .contact-form-container>form {
-        width: 80vw;
-        gap: 5px;
+        width: min(80vw, 400px);
+        gap: 15px;
     }
 
     .form-name>* {

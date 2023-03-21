@@ -1,41 +1,28 @@
-import React, { useEffect, useState } from 'react'
+import React, { useState } from 'react'
 import "../css/foodcreation.css"
 import { motion } from 'framer-motion'
 import { initial, animate, exit } from '../../constants/PageTransitionProperties';
-import TestImage from '../demo/TestImage';
-import { datas } from '../demo/data.js';
+import PhotosContent from '../PhotosContent';
+import VideoContent from '../VideoContent';
+import ReelContent from '../ReelContent';
 
 function FoodCreation() {
 
-  const [images, setImages] = useState([]);
-  let count = 1;
+  const [currTab, setCurrTab] = useState('photos')
 
-  const addImages = () => {
-    const newImages = [];
-    console.log('count', count++);
-
-    // datas.foreach((data) => {
-    //   console.log(datas.length);
-    // })
-
-    // console.log('len',datas.length);
-
-    for (let i = 0; i < datas.length; i++) {
-      const data = datas[i];
-      const url = data.urls.regular;
-      newImages.push(url);
-      newImages.push(data.urls.full);
-    }
-
-    // console.log('datas', datas);
-
-    setImages((prev) => [...prev, ...newImages]);
+  const tabCanged = (e, name) => {
+    setCurrTab(name);
   }
 
-  useEffect(() => {
-    addImages();
-  }, [])
+  const isActive = (name) => {
+    return (currTab === name) ? "active" : ""
+  }
 
+  const switchComponent = (currTab) => {
+    if (currTab === 'photos') return <PhotosContent />
+    if (currTab === 'videos') return <VideoContent />
+    if (currTab === 'reels') return <ReelContent />
+  }
 
   return (
     <motion.div className='food-creation-background page-container'
@@ -43,14 +30,16 @@ function FoodCreation() {
       animate={animate}
       exit={exit}>
 
-      {/* <img className='test-img' src='https://ik.imagekit.io/hbl5agpen/testing/HappyBirthday.png?updatedAt=1679199230928'></img> */}
+      <div className="upper-tabs">
+        <span className={isActive('photos')} onClick={(e) => tabCanged(e, 'photos')} name='photos'>Photos</span>
+        <span className={isActive('videos')} onClick={(e) => tabCanged(e, 'videos')} name='videos'>Videos</span>
+        <span className={isActive('reels')} onClick={(e) => tabCanged(e, 'reels')} name='reels'>Reels</span>
+      </div>
 
-      {/* <img className='test-img' src='https://ik.imagekit.io/hbl5agpen/testing/IMG_20210419_130648.jpg?updatedAt=1679200267346'></img> */}
+      <div className="lower-content-section">
+        {switchComponent(currTab)}
+      </div>
 
-      {(images && images.length > 0) &&
-        images.map((url, num) => {
-          return <TestImage key={num} url={url} num={num} />
-        })}
 
     </motion.div>
   )
