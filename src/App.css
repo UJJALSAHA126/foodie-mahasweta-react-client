@@ -1,3 +1,8 @@
+:root {
+  --z-index-nav: 10;
+  --z-index-top-tab: 9;
+}
+
 .App {
   text-align: center;
 }

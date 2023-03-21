@@ -1,12 +1,14 @@
-import React, { useState } from 'react'
+import React, { useRef, useState } from 'react'
 import "../css/foodcreation.css"
 import { motion } from 'framer-motion'
 import { initial, animate, exit } from '../../constants/PageTransitionProperties';
-import PhotosContent from '../PhotosContent';
-import VideoContent from '../VideoContent';
-import ReelContent from '../ReelContent';
+import PhotosContent from '../content/PhotosContent';
+import VideoContent from '../content/VideoContent';
+import ReelContent from '../content/ReelContent';
 
 function FoodCreation() {
+
+  const photoRef = useRef(null);
 
   const [currTab, setCurrTab] = useState('photos')
 
