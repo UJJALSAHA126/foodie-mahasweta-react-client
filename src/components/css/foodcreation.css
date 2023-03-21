@@ -6,12 +6,19 @@
 
     /* background-image: url("../../resources/images/FB_IMG_1679154100349.jpg"); */
     /* background-image: url("../../resources/images/IMG_20230318_203803.jpg"); */
-    background-image: url("../../resources/images/IMG_20230318_213532.png");
+    /* background-image: url("../../resources/images/IMG_20230318_213532.png"); */
     /* background-image: url("../../resources/images/IMG_20230318_213624.jpg"); */
+
+    background-color: rgb(125, 125, 205);
     background-size: contain;
     /* background-repeat: no-repeat; */
     background-repeat: repeat-x;
     background-position: center;
+
+    display: grid;
+    align-items: start;
+    justify-content: center;
+
 }
 
 /* .food-creation-background::before {
@@ -23,11 +30,79 @@
     left: 0;
     z-index: -1;
     background: url("https://foodie-mahasweta.web.app/resources/images/latest_photos/image2.png") 0 0 no-repeat;
+    background-image: url("../../resources/images/IMG_20230318_213532.png");
+
     transform: rotate(0deg);
 } */
 
+
+.test-img {
+    width: 500px;
+    /* height: 50%; */
+    min-height: 500px;
+    background-color: gray;
+    border-radius: 20px;
+    margin-bottom: 50px;
+
+    animation-name: lazyloading;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+
+@keyframes lazyloading {
+    0% {
+        background: rgb(177, 176, 176);
+    }
+
+    100% {
+        background: rgb(150, 147, 147);
+    }
+}
+
+@keyframes colorPallet {
+    0% {
+        background: #ee6055;
+    }
+
+    25% {
+        background: #60d394;
+    }
+
+    50% {
+        background: #aaf683;
+    }
+
+    75% {
+        background: #ffd97d;
+    }
+
+    100% {
+        background: #ff9b85;
+    }
+}
+
+.test-img-num {
+    width: 50px;
+
+    /* padding: 30px; */
+    font-size: 2rem;
+    display: grid;
+    place-items: center;
+    border-radius: 50%;
+    aspect-ratio: 1/1;
+    margin-inline: auto;
+    color: blue;
+    background-color: rgb(181, 255, 129);
+
+}
+
+
+
+
+
 @media (max-width: 900px) {
-    .food-creation-background{
+    .food-creation-background {
         background-size: cover;
         background-position: center;
     }

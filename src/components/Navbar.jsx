@@ -7,11 +7,7 @@ import { Link, useLocation } from 'react-router-dom';
 
 function Navbar() {
 
-    console.log(window.innerWidth);
-    console.log(window.innerHeight);
-
     const toggleOptionList = () => {
-        // console.log(window.innerWidth);
 
         if (window.innerWidth > 900) {
             return;
